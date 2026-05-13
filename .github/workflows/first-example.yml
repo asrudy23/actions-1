@@ -5,6 +5,8 @@ jobs:
   first-job:
     runs-on: ubuntu-latest
     steps:
+      - name : Clone repo
+        uses: actions/checkout@v6
       - name: My first job
         run: echo "Bonjour tout le monde"
       - name : List files
