@@ -8,8 +8,9 @@ jobs:
       - name : Clone repo
         uses: actions/checkout@v6
       - name: My first job
-        run: echo "Bonjour tout le monde"
-      - name : List files
-        run: ls
-      - name : Read file
-        run : cat README.md 
+        run:
+          echo "Bonjour tout le monde"
+          ls -ltra
+          cat README.md
+      - name : Generate ASCII Artwork
+        run: cowsay -f dragon "Run for cover , I am a DRAGON....RAWR" >> dragon.txt
